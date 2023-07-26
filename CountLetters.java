@@ -21,13 +21,15 @@ public class CountLetters {
             //count frequency of each letter in string
             for (int i=0; i < word.length(); i++) {
 
-                try {
-                    counts[word.charAt(i) - 'A']++;
-                } catch (ArrayIndexOutOfBoundsException e) {
+                char character = word.charAt(i);
 
+                try {
+                    counts[character - 'A']++;
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    System.out.println("Not a letter: " + character);
                 }
             }
-            
+
             //print frequencies
             System.out.println();
             for (int i=0; i < counts.length; i++)
