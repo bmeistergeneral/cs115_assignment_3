@@ -13,6 +13,10 @@ public class MathUtils {
             throw new IllegalArgumentException("This value is negative.");
         }
 
+        if (n > 16) {
+            throw new IllegalArgumentException("This value is over 16.");
+        }
+
         int fac = 1;
         for (int i=n; i>0; i--)
             fac *= i;
