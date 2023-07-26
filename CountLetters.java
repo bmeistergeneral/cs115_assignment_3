@@ -27,8 +27,8 @@ public class CountLetters {
                 System.out.println();
             }
 
-        for (int i=0; i < counts.length; i++) if (counts [i] != 0) {
-            System.out.println((char) (i + 'A') + ": " + counts[i]);
+            for (int i=0; i < counts.length; i++) if (counts [i] != 0) {
+                System.out.println((char) (i + 'A') + ": " + counts[i]);
+            }
         }
-    }
 }
