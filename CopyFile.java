@@ -3,23 +3,23 @@ import java.util.Scanner;
 import java.io.File;
 public class CopyFile {
     public static void main (String[] args) {
-        File file = new File("/Users/breconmorgan/Documents/file.txt");
-        try {
-            Scanner scan = new Scanner(System.in);
+
+        Scanner userInputScan = new Scanner(System.in);
+        Scanner fileScan = null;
+
+        do {
             System.out.println("Enter a file name: ");
-            scan.nextLine();
-            if (!file.exists()) {
-                throw new FileNotFoundException();
-            } else {
+            String filename = userInputScan.nextLine();
+            File file = new File(filename);
+
+            try {
+                fileScan = new Scanner(file);
                 System.out.println("This file does exist.");
+            } catch (FileNotFoundException e) {
+                System.out.println("This file does not exist.");
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("This file was not found.");
-        } finally {
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Enter a file name: ");
-            scan.nextLine();
-        }
+
+        } while (fileScan == null);
 
     }
 }
