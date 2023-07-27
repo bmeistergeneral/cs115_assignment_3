@@ -23,7 +23,11 @@ public class Warning {
 
         try {
             // Set up scanner to input file
+            Scanner scan = new Scanner(inputName);
+
             // Set up the output file stream
+            PrintWriter outFile = new PrintWriter(new FileWriter(outputName));
+
             // Print a header to the output file
             outFile.println();
             outFile.println("Students on Academic Warning");
