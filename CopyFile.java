@@ -21,5 +21,9 @@ public class CopyFile {
 
         } while (fileScan == null);
 
+        while (fileScan.hasNextLine()) {
+            System.out.println(fileScan.nextLine());
+        }
+
     }
 }
