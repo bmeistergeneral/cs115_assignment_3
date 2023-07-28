@@ -23,7 +23,8 @@ public class Warning {
 
         try {
             // Set up scanner to input file
-            Scanner scan = new Scanner(inputName);
+            File file = new File(inputName);
+            Scanner scan = new Scanner(file);
 
             // Set up the output file stream
             PrintWriter outFile = new PrintWriter(new FileWriter(outputName));
