@@ -14,7 +14,7 @@ public class ParseInts {
         Scanner scan = new Scanner(System.in);
         String line;
 
-        System.out.println("Enter a line of text");
+        System.out.println("Enter a line of one or more integers: ");
         Scanner scanLine = new Scanner(scan.nextLine());
 
 
